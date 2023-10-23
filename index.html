@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="grid-content">
+        <div class="user-container">
+          <div class="userCard">
+            <div class="img-user">
+              <img src="./images/image-jeremy.png" alt="user imagen" />
+            </div>
+            <div class="user-data">
+              <p class="title">Report for</p>
+              <h1>Jeremy Robson</h1>
+            </div>
+          </div>
+          <div class="filter">
+            <button id="daily">Daily</button>
+            <button id="weekly">Weekly</button>
+            <button id="monthly">Monthly</button>
+          </div>
+        </div>
+        <div class="workCard card">
+          <div class="card-container">
+            <div class="flex-nav">
+              <p class="work">Work</p>
+              <a href="#" class="menu"
+                ><img src="./images/icon-ellipsis.svg" alt=""
+              /></a>
+            </div>
+            <h2 id="timeTotalWork">32hrs</h2>
+            <p class="dataWork"></p>
+          </div>
+        </div>
+
+        <div class="playCard card">
+          <div class="card-container">
+            <div class="flex-nav">
+              <p class="play">Play</p>
+              <a href="#" class="menu"
+                ><img src="./images/icon-ellipsis.svg" alt=""
+              /></a>
+            </div>
+            <h2 id="timeTotalPlay">32hrs</h2>
+            <p class="dataPlay"></p>
+          </div>
+        </div>
+
+        <div class="studyCard card">
+          <div class="card-container">
+            <div class="flex-nav">
+              <p class="study">Study</p>
+              <a href="#" class="menu"
+                ><img src="./images/icon-ellipsis.svg" alt=""
+              /></a>
+            </div>
+            <h2 id="timeTotalStudy">4hrs</h2>
+            <p class="dataStudy"></p>
+          </div>
+        </div>
+
+        <div class="exerciseCard card">
+          <div class="card-container">
+            <div class="flex-nav">
+              <p class="exercise">Exercise</p>
+              <a href="#" class="menu"
+                ><img src="./images/icon-ellipsis.svg" alt=""
+              /></a>
+            </div>
+            <h2 id="timeTotalExcercise">32hrs</h2>
+            <p class="dataExcercise"></p>
+          </div>
+        </div>
+
+        <div class="socialCard card">
+          <div class="card-container">
+            <div class="flex-nav">
+              <p class="social">Social</p>
+              <a href="#" class="menu"
+                ><img src="./images/icon-ellipsis.svg" alt=""
+              /></a>
+            </div>
+            <h2 id="timeTotalPlay">5hrs</h2>
+            <p class="dataSocial"></p>
+          </div>
+        </div>
+
+        <div class="selfCareCard card">
+          <div class="card-container">
+            <div class="flex-nav">
+              <p class="selfcare">selfCare</p>
+              <a href="#" class="menu"
+                ><img src="./images/icon-ellipsis.svg" alt=""
+              /></a>
+            </div>
+            <h2 id="timeTotalSelfCare">32hrs</h2>
+            <p class="dataselfCare"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js.js"></script>
+  </body>
+</html>

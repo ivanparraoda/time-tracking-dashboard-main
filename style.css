@@ -1,0 +1,222 @@
+:root {
+  /* Primary */
+  --Blue: hsl(246, 80%, 60%);
+  --Lightredwork: hsl(15, 100%, 70%);
+  --Softblueplay: hsl(195, 74%, 62%);
+  --Lightredstudy: hsl(348, 100%, 68%);
+  --Limegreenexercise: hsl(145, 58%, 55%);
+  --Violetsocial: hsl(264, 64%, 52%);
+  --Softorangeselfcare: hsl(43, 84%, 65%);
+  /* Neutral */
+  --Verydarkblue: hsl(226, 43%, 10%);
+  --Darkblue: hsl(236, 44%, 25%);
+  --Desaturatedblue: hsl(235, 45%, 61%);
+  --PaleBlue: hsl(236, 100%, 87%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: var(--Verydarkblue);
+  color: var(--white);
+  font-family: 'Rubik', sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.grid-content * {
+  border-radius: 10px;
+}
+.grid-content {
+  height: 400px;
+  width: 900px;
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px 20px;
+  grid-template-areas:
+    'user-container workCard playCard studyCard'
+    'user-container excerciseCard socialCard selfcCareCard';
+}
+.user-container {
+  grid-area: user-container;
+  background-color: var(--Darkblue);
+}
+.userCard {
+  background-color: var(--Blue);
+  height: 273px;
+  padding: 20px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 20px;
+  row-gap: 10px;
+}
+button {
+  outline: none;
+  background-color: transparent;
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  color: var(--Desaturatedblue);
+}
+
+.img-user img {
+  width: 60px;
+  border: 2px solid var(--white);
+  border-radius: 500vh;
+  max-width: 100%;
+  margin-bottom: 25px;
+}
+.title {
+  font-size: 12px;
+  color: var(--PaleBlue);
+}
+
+.userCard h1 {
+  font-weight: 300;
+}
+.workCard {
+  grid-area: workCard;
+  background-image: url(./images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 50px;
+  background-color: var(--Lightredwork);
+}
+.playCard {
+  grid-area: playCard;
+  background-image: url(./images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 50px;
+  background-color: var(--Softblueplay);
+}
+.studyCard {
+  grid-area: studyCard;
+  background-image: url(./images/icon-study.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 50px;
+  background-color: var(--Lightredstudy);
+}
+.exerciseCard {
+  grid-area: excerciseCard;
+  background-image: url(./images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 50px;
+  background-color: var(--Limegreenexercise);
+}
+.socialCard {
+  grid-area: socialCard;
+  background-image: url(./images/icon-social.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 50px;
+  background-color: var(--Violetsocial);
+}
+.selfCareCard {
+  grid-area: selfcCareCard;
+  background-image: url(./images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 50px;
+  background-color: var(--Softorangeselfcare);
+}
+
+.flex-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-container {
+  position: relative;
+  top: 47px;
+  height: 145px;
+  background-color: var(--Darkblue);
+  padding: 20px;
+  cursor: pointer;
+}
+.card-container:hover {
+  background-color: var(--Desaturatedblue);
+}
+
+.card-container p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.card-container h2 {
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .container {
+    margin-top: 10px;
+  }
+  .grid-content {
+    height: 400px;
+    width: 300px; /* Ancho de la cuadrícula para mostrar solo una columna */
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: auto; /* Solo una columna con el ancho deseado */
+    gap: 20px 20px;
+    grid-template-areas:
+      'user-container'
+      'workCard'
+      'playCard'
+      'studyCard'
+      'excerciseCard'
+      'socialCard'
+      'selfcCareCard';
+  }
+
+  .filter {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .userCard {
+    display: flex;
+    column-gap: 10px;
+    height: 135px;
+    align-items: center;
+  }
+  .user-data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    height: 191px;
+    width: 305px;
+  }
+  .userCard h1 {
+    font-size: 24px;
+  }
+  .img-user img {
+    margin-bottom: 0px;
+  }
+}
