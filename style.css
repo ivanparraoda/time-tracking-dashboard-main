@@ -20,25 +20,26 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  width: 100vw;
 
+body {
   background-color: var(--Verydarkblue);
   color: var(--white);
   font-family: 'Rubik', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container {
   display: flex;
   justify-content: center;
-  margin-top: 90px;
+  width: 750px;
+  margin-top: 8rem;
 }
 
 .grid-content * {
   border-radius: 10px;
 }
 .grid-content {
-  height: 400px;
-  width: 900px;
   border-radius: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -92,6 +93,28 @@ button:hover {
 .userCard h1 {
   font-weight: 300;
 }
+
+.card-container {
+  position: relative;
+  top: 47px;
+  height: 133px;
+  background-color: var(--Darkblue);
+  padding: 20px;
+  cursor: pointer;
+}
+.card-container:hover {
+  background-color: var(--Desaturatedblue);
+}
+
+.card-container p {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.card-container h2 {
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
 .workCard {
   grid-area: workCard;
   background-image: url(./images/icon-work.svg);
@@ -146,41 +169,12 @@ button:hover {
   justify-content: space-between;
 }
 
-.card-container {
-  position: relative;
-  top: 47px;
-  height: 145px;
-  background-color: var(--Darkblue);
-  padding: 20px;
-  cursor: pointer;
-}
-.card-container:hover {
-  background-color: var(--Desaturatedblue);
-}
-
-.card-container p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-.card-container h2 {
-  font-weight: 300;
-  font-size: 2.5rem;
-}
-
 @media screen and (max-width: 600px) {
-  body {
-    height: 100%;
-  }
   .container {
     margin-top: 10px;
   }
   .grid-content {
-    height: 400px;
-    width: 300px; /* Ancho de la cuadrícula para mostrar solo una columna */
-    border-radius: 30px;
-    display: grid;
-    grid-template-columns: auto; /* Solo una columna con el ancho deseado */
-    gap: 20px 20px;
+    gap: 20px;
     grid-template-areas:
       'user-container'
       'workCard'
@@ -189,6 +183,7 @@ button:hover {
       'excerciseCard'
       'socialCard'
       'selfcCareCard';
+    grid-template-columns: 1fr;
   }
 
   .filter {
@@ -209,7 +204,6 @@ button:hover {
 
   .card {
     height: 180px;
-    width: 295px;
   }
   .card-container {
     height: 135px;
