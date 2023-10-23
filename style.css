@@ -169,8 +169,7 @@ button:hover {
 
 @media screen and (max-width: 600px) {
   body {
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
   }
   .container {
     margin-top: 10px;
@@ -209,8 +208,11 @@ button:hover {
   }
 
   .card {
-    height: 191px;
-    width: 305px;
+    height: 180px;
+    width: 295px;
+  }
+  .card-container {
+    height: 135px;
   }
   .userCard h1 {
     font-size: 24px;
