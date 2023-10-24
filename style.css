@@ -107,7 +107,8 @@ button:hover {
 }
 
 .card-container p {
-  font-size: 18px;
+  font-size: 13px;
+  color: var(--PaleBlue);
   margin-bottom: 8px;
 }
 .card-container h2 {
@@ -208,10 +209,21 @@ button:hover {
   .card-container {
     height: 135px;
   }
+  .card-container h2 {
+    font-size: 2rem;
+    margin-top: 10px;
+  }
   .userCard h1 {
     font-size: 24px;
   }
   .img-user img {
     margin-bottom: 0px;
+  }
+
+  .data-sum {
+    display: flex;
+    align-content: space-around;
+    align-items: flex-end;
+    justify-content: space-between;
   }
 }
