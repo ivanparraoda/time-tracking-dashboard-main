@@ -231,7 +231,7 @@ button:hover {
 
 #home {
   text-decoration: none;
-  padding: 1rem;
+  padding: 5px 15px;
   color: white !important;
   font-size: 2rem !important;
   position: absolute !important;
